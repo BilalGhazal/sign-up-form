@@ -7,8 +7,8 @@
     --first-subcontainer-width: 35%;
     --second-subcontainer-width: calc(100% - var(--first-subcontainer-width));
     --second-container-height: 35%;
-    --third-container-height: 25%;
-    --fourth-container-height: 40%;
+    --third-container-height: calc(100% - (var(--second-container-height) + var(--fourth-container-height)));
+    --fourth-container-height: var(--second-container-height);
 }
 
 p {
@@ -39,13 +39,13 @@ html, body {
     align-items: center;
     width: var(--first-subcontainer-width);
     
+    
 }
 
 .second-subcontainer {
     display: flex;
     flex-direction: column;
-    width: var(--second-subcontainer-width);
-    
+    width: var(--second-subcontainer-width);    
 }
 
 .logo-container {
@@ -77,29 +77,27 @@ html, body {
     font-size: 15px;
 }
 
-a {
-    color: inherit;
+.first-subcontainer a {
+    color: white;
     text-decoration-color: white;
 }
 
 
 .second-container {
-    
     background-color: rgb(239, 236, 236);
     height: var(--second-container-height);
-    position: relative;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-right: 100px;
+    box-sizing: border-box;
 }
 
 .first-line, .second-line {
     font-weight: bold;
     font-size: 20px;
-    margin-left: 40px;  
-    margin-right: 100px; 
-    
 }
 
 .first-line {
-  margin-top: 100px;
   margin-bottom: 20px;
 }
 
@@ -107,17 +105,75 @@ a {
     height: var(--third-container-height);
     display: flex;
     flex-direction: column;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    gap: 20px;
+    box-sizing: border-box; 
 }
 
 .inputs {
     display: flex;
+    gap: 60px;
 }
 
-.first-inputs {
+.first-inputs, .second-inputs {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
+
+input {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+label {
+    font-size: 12px;
+}
+
+.text-above-inputs {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type='password']:invalid {
+    border-color: red;
+}
+input:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 
 .fourth-container {
     height: var(--fourth-container-height);
+    padding-left: 40px;
+    padding-top: 20px;
+    background-color: rgb(239, 236, 236);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 10px 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.fourth-container a {
+    color: #596D48;
+    text-decoration: none;
+    
+}
+
+.fourth-container p {
+    font-size: 15px;
+
 }

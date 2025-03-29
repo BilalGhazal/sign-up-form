@@ -26,14 +26,43 @@
                 </p>
             </div>
             <div class="third-container">
-                <p>Let's do this!</p>
-                <div class="inputs">
-                    <div class="first-inputs"></div>
-                    <div class="second-inputs"></div>
-                </div>
+                <p class="text-above-inputs">Let's do this!</p>
+                <form class="inputs" id="form">
+                    <div class="first-inputs">
+                        <div>
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name">
+                        </div>
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div>
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" required>
+                        </div>
+                    </div>
+                    <div class="second-inputs">
+                        <div>
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name">
+                        </div>
+                        <div>
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="tel" id="phone-number">
+                        </div>
+                        <div>
+                            <label for="confirmed-password">CONFIRMED PASSWORD</label>
+                            <input type="password" id="confirmed-password" required>
+                        </div>
+                    </div>
+                </form>
                 
             </div>
-            <div class="fourth-container"></div>
+            <div class="fourth-container">
+                <button type="submit" form="form">Create Account</button>
+                <p>Already have an account? <a href="/sign-up-form">Log in</a></p>
+            </div>
         </div>
     </div>
     
